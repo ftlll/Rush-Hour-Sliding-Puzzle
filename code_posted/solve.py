@@ -1,9 +1,10 @@
+from os import path
 from board import *
 import copy
 import functools
 import heapq
 
-#boards = from_file("jams_posted.txt")
+# boards = from_file("jams_posted.txt")
 
 def get_successors(state):
     """
@@ -91,14 +92,6 @@ def get_successors(state):
                     break
     return new_states
 
-#test code
-# state = State(boards[0], zero_heuristic, 0, 0)
-# state.board.display()
-# print('____________________')
-# new_states = get_successors(state)
-# for new_state in new_states:
-#     new_state.board.display()
-
 def is_goal(state):
     """
     Returns True if the state is the goal state and False otherwise.
@@ -158,7 +151,6 @@ def blocking_heuristic(board):
                 block = block + 1
     return block
 
-
 def advanced_heuristic(board):
     """
     An advanced heuristic of your own choosing and invention.
@@ -168,8 +160,53 @@ def advanced_heuristic(board):
     :return: The heuristic value.
     :rtype: int
     """
-
-    raise NotImplementedError
+    """
+    idea: advanced heuristic function returns zero at any goal board,
+    and similar to blocking_heuristic, we add 1 for each blocking car.
+    and we add min of cars blocks blocking cars upper or below
+    """
+    grid = board.grid
+    cars = board.cars
+    # if it is goal state, return 0
+    if grid[2][5] == ">":
+        return 0
+    # if it is not goal state find blocking cars
+    block_col = []
+    right = 6
+    for i in range(1,6):
+        if grid[2][i] == ">":
+            right = i
+        elif grid[2][i] == "^" or grid[2][i] == "|" or grid[2][i] == "v":
+            if i > right:
+                block_col.append(i)
+    #we find the blocking cars
+    blocking_cars = []
+    blocking_cars_top = []
+    blocking_cars_bottom = []
+    for car in cars:
+        if car.is_goal:
+            continue
+        if car.orientation == "v":
+            if car.fix_coord in block_col:
+                if car.var_coord + car.length < 2:
+                    blocking_cars_top.append(car)
+                elif car.var_coord > 2:
+                    blocking_cars_bottom.append(car)
+                else:
+                    blocking_cars.append(car)
+        elif car.orientation == "h":
+            found = False
+            for i in range(car.var_coord, car.var_coord + car.length):
+                if i in block_col:
+                    if found:
+                        break
+                    elif car.fix_coord < 2:
+                        blocking_cars_top.append(car)
+                        found = True
+                    else:
+                        blocking_cars_bottom.append(car)
+                        found = True
+    return 1 + len(blocking_cars) + min(len(blocking_cars_top), len(blocking_cars_bottom))
 
 def compare_dfs(state_a, state_b):
     if not state_a.f == state_b.f:
@@ -216,14 +253,6 @@ def dfs(init_board):
                 frontier.extend(neighbours)
     return [], -1
 
-def compare_astar(state_a, state_b):
-    if not state_a.f == state_b.f:
-        return state_b.f - state_a.f 
-    while state_b.id == state_a.id:
-        state_b = state_b.parent
-        state_a = state_a.parent
-    return state_b.id - state_a.id
-
 def in_explored(explored, state):
     for _state in explored:
         if state.f >= _state.f and state.id == _state.id:
@@ -247,7 +276,7 @@ def a_star(init_board, hfn):
     :rtype: List[State], int
     """
     init_state = State(init_board, hfn, hfn(init_board), 0)
-
+    num_states = 0
     # frontier is a priority queue in A star
     frontier = [(init_state.f, init_state.id, 0, init_state)]
     heapq.heapify(frontier)
@@ -256,6 +285,7 @@ def a_star(init_board, hfn):
     while frontier:
         f, id, parentId, new_state = heapq.heappop(frontier) # select and remove path from frontier
         if not in_explored(explored, new_state):
+            num_states = num_states + 1
             explored.append(new_state)
             if is_goal(new_state):
                 path = get_path(new_state)
@@ -264,18 +294,19 @@ def a_star(init_board, hfn):
                 neighbours = get_successors(new_state)
                 for neighbour in neighbours:
                     heapq.heappush(frontier, (neighbour.f, neighbour.id, neighbour.parent.id, neighbour))
-                    
     return [], -1
 
-# test_board = boards[2]
-# test_board.display()
-# path1, cost1 = dfs(test_board)
-# for state in path1:
-#     state.board.display()
-# print(cost1)
+# i = 0
 # for test_board in boards:
+#     i = i + 1
+#     print("Jam-",i)
 #     test_board.display()
-#     path2, cost2 = a_star(test_board, blocking_heuristic)
-#     for state in path2:
-#         state.board.display()
-#     print(cost2)
+#     path1, cost1, num_state1 = a_star(test_board, blocking_heuristic)
+#     print("# of states:", num_state1)
+#     print("cost of blocking_heuristic:",cost1)
+#     path2, cost2, num_state2 = a_star(test_board, advanced_heuristic)
+#     print("# of states : ", num_state2)
+#     print("cost of advanced_heuristic:",cost2)
+#     if num_state1 >= num_state2:
+#         print("advanced heuristic dominates the blocking heuristic")
+

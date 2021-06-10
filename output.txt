@@ -1,0 +1,559 @@
+Jam- 1
++-------------+
+| < > . . . ^ |
+| ^ . . ^ . | |
+| | < > | . v  
+| v . . v . . |
+| ^ . . . < > |
+| v . < - > . |
++-------------+
+# of states: 674
+cost of blocking_heuristic: 8
+# of states :  516
+cost of advanced_heuristic: 8
+advanced heuristic dominates the blocking heuristic
+Jam- 2
++-------------+
+| ^ . . < - > |
+| v . . ^ . ^ |
+| < > . v ^ |  
+| < - > . v v |
+| . . ^ . < > |
+| < > v < > . |
++-------------+
+# of states: 404
+cost of blocking_heuristic: 8
+# of states :  231
+cost of advanced_heuristic: 8
+advanced heuristic dominates the blocking heuristic
+Jam- 3
++-------------+
+| . . . . . . |
+| . . . . . . |
+| . < > ^ . .  
+| . < > | . ^ |
+| . ^ . v . | |
+| . v < > . v |
++-------------+
+# of states: 456
+cost of blocking_heuristic: 14
+# of states :  456
+cost of advanced_heuristic: 14
+advanced heuristic dominates the blocking heuristic
+Jam- 4
++-------------+
+| ^ . . ^ . . |
+| | . . | . . |
+| v < > v . .  
+| . . ^ < - > |
+| . . v . . ^ |
+| . . < - > v |
++-------------+
+# of states: 140
+cost of blocking_heuristic: 9
+# of states :  140
+cost of advanced_heuristic: 9
+advanced heuristic dominates the blocking heuristic
+Jam- 5
++-------------+
+| < > . ^ . ^ |
+| ^ . . | ^ v |
+| | < > v | ^  
+| v < - > v v |
+| ^ . . . < > |
+| v . . . < > |
++-------------+
+# of states: 611
+cost of blocking_heuristic: 9
+# of states :  532
+cost of advanced_heuristic: 9
+advanced heuristic dominates the blocking heuristic
+Jam- 6
++-------------+
+| < > . ^ . . |
+| < > . v ^ ^ |
+| . < > ^ | |  
+| < > ^ | v v |
+| ^ . v v . . |
+| v . . < - > |
++-------------+
+# of states: 565
+cost of blocking_heuristic: 9
+# of states :  546
+cost of advanced_heuristic: 9
+advanced heuristic dominates the blocking heuristic
+Jam- 7
++-------------+
+| . ^ < > ^ ^ |
+| . v . ^ v v |
+| . < > v . ^  
+| . . < > . v |
+| . . . ^ . . |
+| . . . v . . |
++-------------+
+# of states: 1931
+cost of blocking_heuristic: 13
+# of states :  1734
+cost of advanced_heuristic: 13
+advanced heuristic dominates the blocking heuristic
+Jam- 8
++-------------+
+| . . . < > ^ |
+| . . < > ^ | |
+| < > ^ ^ v v  
+| < > v v < > |
+| < > ^ < - > |
+| < > v < - > |
++-------------+
+# of states: 910
+cost of blocking_heuristic: 12
+# of states :  725
+cost of advanced_heuristic: 12
+advanced heuristic dominates the blocking heuristic
+Jam- 9
++-------------+
+| . ^ < > < > |
+| . v . ^ < > |
+| < > . v ^ ^  
+| ^ < - > | v |
+| | . ^ . v ^ |
+| v . v . . v |
++-------------+
+# of states: 376
+cost of blocking_heuristic: 12
+# of states :  235
+cost of advanced_heuristic: 12
+advanced heuristic dominates the blocking heuristic
+Jam- 10
++-------------+
+| < > ^ . < > |
+| < > v . . ^ |
+| ^ < > . . |  
+| | < - > . v |
+| v . . ^ < > |
+| < > . v < > |
++-------------+
+# of states: 1481
+cost of blocking_heuristic: 17
+# of states :  1373
+cost of advanced_heuristic: 17
+advanced heuristic dominates the blocking heuristic
+Jam- 11
++-------------+
+| ^ < > ^ . . |
+| | . . | . . |
+| v < > v . .  
+| . . ^ < - > |
+| . . v . . ^ |
+| . . < - > v |
++-------------+
+# of states: 656
+cost of blocking_heuristic: 25
+# of states :  626
+cost of advanced_heuristic: 25
+advanced heuristic dominates the blocking heuristic
+Jam- 12
++-------------+
+| ^ < > . . ^ |
+| v . ^ . . | |
+| < > | . . v  
+| . . v < - > |
+| . . . . ^ . |
+| < - > . v . |
++-------------+
+# of states: 746
+cost of blocking_heuristic: 17
+# of states :  554
+cost of advanced_heuristic: 17
+advanced heuristic dominates the blocking heuristic
+Jam- 13
++-------------+
+| < > < > ^ . |
+| . . ^ . v ^ |
+| . ^ v < > |  
+| ^ v . < > v |
+| | . . ^ < > |
+| v < > v < > |
++-------------+
+# of states: 3750
+cost of blocking_heuristic: 16
+# of states :  3113
+cost of advanced_heuristic: 16
+advanced heuristic dominates the blocking heuristic
+Jam- 14
++-------------+
+| < > ^ . . . |
+| . . v . < > |
+| ^ ^ < > ^ ^  
+| v v < > v v |
+| . . ^ . < > |
+| < > v . . . |
++-------------+
+# of states: 3415
+cost of blocking_heuristic: 17
+# of states :  2755
+cost of advanced_heuristic: 17
+advanced heuristic dominates the blocking heuristic
+Jam- 15
++-------------+
+| . < > < > . |
+| < > < > ^ ^ |
+| ^ ^ < > | |  
+| | | ^ ^ v v |
+| v v v v < > |
+| . < > < > . |
++-------------+
+# of states: 518
+cost of blocking_heuristic: 23
+# of states :  514
+cost of advanced_heuristic: 23
+advanced heuristic dominates the blocking heuristic
+Jam- 16
++-------------+
+| < > < > ^ ^ |
+| ^ . < > v | |
+| v ^ ^ < > v  
+| . v | < - > |
+| . . v . . . |
+| < > . . . . |
++-------------+
+# of states: 1983
+cost of blocking_heuristic: 21
+# of states :  1870
+cost of advanced_heuristic: 21
+advanced heuristic dominates the blocking heuristic
+Jam- 17
++-------------+
+| ^ < - > . . |
+| v . < > < > |
+| < > ^ . . .  
+| < > v ^ . . |
+| < - > | ^ ^ |
+| < - > v v v |
++-------------+
+# of states: 1808
+cost of blocking_heuristic: 24
+# of states :  1466
+cost of advanced_heuristic: 24
+advanced heuristic dominates the blocking heuristic
+Jam- 18
++-------------+
+| < > ^ ^ . . |
+| < > v | . . |
+| ^ < > v . .  
+| | < - > . . |
+| v < > . . . |
+| < - > . . . |
++-------------+
+# of states: 1352
+cost of blocking_heuristic: 25
+# of states :  1351
+cost of advanced_heuristic: 25
+advanced heuristic dominates the blocking heuristic
+Jam- 19
++-------------+
+| . . ^ < > . |
+| . . v . ^ . |
+| . ^ < > v .  
+| . v < > ^ . |
+| . < - > v . |
+| . . . . . . |
++-------------+
+# of states: 466
+cost of blocking_heuristic: 22
+# of states :  463
+cost of advanced_heuristic: 22
+advanced heuristic dominates the blocking heuristic
+Jam- 20
++-------------+
+| ^ . . < - > |
+| v < > ^ . . |
+| < > ^ v . ^  
+| . . v . . | |
+| . . ^ < > v |
+| . . v < - > |
++-------------+
+# of states: 339
+cost of blocking_heuristic: 10
+# of states :  306
+cost of advanced_heuristic: 10
+advanced heuristic dominates the blocking heuristic
+Jam- 21
++-------------+
+| < > ^ ^ . . |
+| ^ . v | . . |
+| | < > v . .  
+| v < - > . . |
+| . . . . . . |
+| . . . < - > |
++-------------+
+# of states: 242
+cost of blocking_heuristic: 21
+# of states :  242
+cost of advanced_heuristic: 21
+advanced heuristic dominates the blocking heuristic
+Jam- 22
++-------------+
+| . . ^ < - > |
+| ^ . v ^ < > |
+| v < > | . .  
+| . ^ . v < > |
+| ^ v < > . ^ |
+| v < - > . v |
++-------------+
+# of states: 2490
+cost of blocking_heuristic: 26
+# of states :  2017
+cost of advanced_heuristic: 26
+advanced heuristic dominates the blocking heuristic
+Jam- 23
++-------------+
+| . . < - > ^ |
+| . . ^ < > | |
+| . . v < > v  
+| . . ^ ^ < > |
+| . . v v < > |
+| . . < - > . |
++-------------+
+# of states: 1317
+cost of blocking_heuristic: 29
+# of states :  1284
+cost of advanced_heuristic: 29
+advanced heuristic dominates the blocking heuristic
+Jam- 24
++-------------+
+| . . ^ < > . |
+| . ^ v . . . |
+| ^ v < > ^ .  
+| v < > . v . |
+| < - > . ^ . |
+| < > . . v . |
++-------------+
+# of states: 4095
+cost of blocking_heuristic: 25
+# of states :  3962
+cost of advanced_heuristic: 25
+advanced heuristic dominates the blocking heuristic
+Jam- 25
++-------------+
+| < > ^ . < > |
+| < > v . . ^ |
+| ^ < > . ^ |  
+| | < - > v v |
+| v ^ . ^ < > |
+| . v . v < > |
++-------------+
+# of states: 6582
+cost of blocking_heuristic: 27
+# of states :  5972
+cost of advanced_heuristic: 27
+advanced heuristic dominates the blocking heuristic
+Jam- 26
++-------------+
+| . ^ . < - > |
+| ^ v . ^ ^ . |
+| v < > v | ^  
+| ^ < - > v v |
+| v . ^ . . ^ |
+| . . v < > v |
++-------------+
+# of states: 4154
+cost of blocking_heuristic: 28
+# of states :  3785
+cost of advanced_heuristic: 28
+advanced heuristic dominates the blocking heuristic
+Jam- 27
++-------------+
+| ^ < > ^ . . |
+| v < > | . . |
+| < > ^ v . ^  
+| . . v < > | |
+| . . ^ . . v |
+| . . v < - > |
++-------------+
+# of states: 2218
+cost of blocking_heuristic: 28
+# of states :  1964
+cost of advanced_heuristic: 28
+advanced heuristic dominates the blocking heuristic
+Jam- 28
++-------------+
+| < - > ^ . . |
+| . . ^ v < > |
+| < > | . . .  
+| ^ ^ v < > ^ |
+| v v < - > | |
+| < > < > . v |
++-------------+
+# of states: 1466
+cost of blocking_heuristic: 30
+# of states :  1053
+cost of advanced_heuristic: 30
+advanced heuristic dominates the blocking heuristic
+Jam- 29
++-------------+
+| < - > . ^ . |
+| . . ^ . | . |
+| < > v . v ^  
+| ^ < > < > v |
+| v < > ^ . ^ |
+| < - > v . v |
++-------------+
+# of states: 4277
+cost of blocking_heuristic: 31
+# of states :  4164
+cost of advanced_heuristic: 31
+advanced heuristic dominates the blocking heuristic
+Jam- 30
++-------------+
+| ^ . ^ < - > |
+| | . v ^ . . |
+| v < > v . .  
+| < > < > . ^ |
+| . . . . . | |
+| < > < > . v |
++-------------+
+# of states: 1028
+cost of blocking_heuristic: 32
+# of states :  961
+cost of advanced_heuristic: 32
+advanced heuristic dominates the blocking heuristic
+Jam- 31
++-------------+
+| < > . < - > |
+| . . . ^ < > |
+| ^ < > v . ^  
+| v . ^ < > | |
+| < > | . . v |
+| . . v < - > |
++-------------+
+# of states: 3740
+cost of blocking_heuristic: 37
+# of states :  3525
+cost of advanced_heuristic: 37
+advanced heuristic dominates the blocking heuristic
+Jam- 32
++-------------+
+| < > ^ ^ < > |
+| . . | v . . |
+| < > v . . .  
+| ^ < > < > ^ |
+| v . . ^ . | |
+| < > . v . v |
++-------------+
+# of states: 501
+cost of blocking_heuristic: 37
+# of states :  472
+cost of advanced_heuristic: 37
+advanced heuristic dominates the blocking heuristic
+Jam- 33
++-------------+
+| . ^ ^ . < > |
+| . v | . . . |
+| < > v . . .  
+| ^ < > < > ^ |
+| v < > ^ ^ | |
+| < - > v v v |
++-------------+
+# of states: 3018
+cost of blocking_heuristic: 40
+# of states :  2256
+cost of advanced_heuristic: 40
+advanced heuristic dominates the blocking heuristic
+Jam- 34
++-------------+
+| ^ . . < - > |
+| v . . ^ . ^ |
+| < > . v ^ |  
+| < - > ^ v v |
+| . . ^ v < > |
+| < > v < > . |
++-------------+
+# of states: 4080
+cost of blocking_heuristic: 43
+# of states :  4013
+cost of advanced_heuristic: 43
+advanced heuristic dominates the blocking heuristic
+Jam- 35
++-------------+
+| . . ^ < > ^ |
+| . . | ^ . | |
+| < > v v . v  
+| ^ < - > . . |
+| v < > ^ ^ . |
+| < > . v v . |
++-------------+
+# of states: 3816
+cost of blocking_heuristic: 43
+# of states :  3859
+cost of advanced_heuristic: 43
+Jam- 36
++-------------+
+| ^ < - > < > |
+| | ^ < > . ^ |
+| v v < > . |  
+| < - > ^ . v |
+| . . ^ v < > |
+| < > v . . . |
++-------------+
+# of states: 2056
+cost of blocking_heuristic: 44
+# of states :  1860
+cost of advanced_heuristic: 44
+advanced heuristic dominates the blocking heuristic
+Jam- 37
++-------------+
+| < > ^ . < > |
+| < > v . ^ ^ |
+| ^ < > . | |  
+| | < - > v v |
+| v . . ^ < > |
+| < > . v < > |
++-------------+
+# of states: 1863
+cost of blocking_heuristic: 47
+# of states :  1731
+cost of advanced_heuristic: 47
+advanced heuristic dominates the blocking heuristic
+Jam- 38
++-------------+
+| ^ . . < - > |
+| v < > ^ . . |
+| < > ^ v . ^  
+| . . v < > | |
+| . . ^ < > v |
+| . . v < - > |
++-------------+
+# of states: 3038
+cost of blocking_heuristic: 48
+# of states :  2963
+cost of advanced_heuristic: 48
+advanced heuristic dominates the blocking heuristic
+Jam- 39
++-------------+
+| . . ^ < - > |
+| . . v ^ . . |
+| < > ^ v . ^  
+| < > v < > | |
+| ^ ^ < > . v |
+| v v < > . . |
++-------------+
+# of states: 3502
+cost of blocking_heuristic: 50
+# of states :  3469
+cost of advanced_heuristic: 50
+advanced heuristic dominates the blocking heuristic
+Jam- 40
++-------------+
+| ^ < > . ^ . |
+| | ^ ^ . v ^ |
+| v v v < > |  
+| < - > ^ . v |
+| . . ^ v < > |
+| < > v < > . |
++-------------+
+# of states: 2302
+cost of blocking_heuristic: 51
+# of states :  2578
+cost of advanced_heuristic: 51 
+
