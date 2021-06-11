@@ -4,7 +4,7 @@ import copy
 import functools
 import heapq
 
-# boards = from_file("jams_posted.txt")
+boards = from_file("jams_posted.txt")
 
 def get_successors(state):
     """
@@ -146,74 +146,98 @@ def blocking_heuristic(board):
     for i in range(1,6):
         if grid[2][i] == ">":
             right = i
-        elif grid[2][i] == "^" or grid[2][i] == "|" or grid[2][i] == "v":
-            if i > right:
-                block = block + 1
+            break
+    for i in range(right, 6):
+        if grid[2][i] == "^" or grid[2][i] == "|" or grid[2][i] == "v":
+            block = block + 1
     return block
 
-def advanced_heuristic(board):
-    """
-    An advanced heuristic of your own choosing and invention.
+def find_car(cars, x, y):
+    for car in cars:
+        if car.orientation == "h":
+            if car.fix_coord == y:
+                if x in range(car.var_coord, car.var_coord + car.length):
+                    return car
+        elif car.orientation == "v":
+            if car.fix_coord == x:
+                if y in range(car.var_coord, car.var_coord + car.length):
+                    return car
+    return None
 
-    :param board: The current board.
-    :type board: Board
-    :return: The heuristic value.
-    :rtype: int
-    """
-    """
-    idea: advanced heuristic function returns zero at any goal board,
-    and similar to blocking_heuristic, we add 1 for each blocking car.
-    and we add min of cars blocks blocking cars upper or below
-    """
+def advanced_heuristic(board):
     grid = board.grid
     cars = board.cars
     # if it is goal state, return 0
     if grid[2][5] == ">":
         return 0
     # if it is not goal state find blocking cars
-    block_col = []
-    right = 6
-    for i in range(1,6):
-        if grid[2][i] == ">":
-            right = i
-        elif grid[2][i] == "^" or grid[2][i] == "|" or grid[2][i] == "v":
-            if i > right:
-                block_col.append(i)
-    #we find the blocking cars
-    blocking_cars = []
-    blocking_cars_top = []
-    blocking_cars_bottom = []
+    # find goal car first
     for car in cars:
         if car.is_goal:
-            continue
+            goal_car = car
+    right = goal_car.var_coord + goal_car.length
+    blocking_cars = []
+    for car in cars:
         if car.orientation == "v":
-            if car.fix_coord in block_col:
-                if car.var_coord + car.length < 2:
-                    blocking_cars_top.append(car)
-                elif car.var_coord > 2:
-                    blocking_cars_bottom.append(car)
-                else:
+            if car.fix_coord >= right:
+                if car.var_coord + car.length >= 3 and car.var_coord <= 2:
                     blocking_cars.append(car)
-        elif car.orientation == "h":
-            found = False
-            for i in range(car.var_coord, car.var_coord + car.length):
-                if i in block_col:
-                    if found:
-                        break
-                    elif car.fix_coord < 2:
-                        blocking_cars_top.append(car)
-                        found = True
-                    else:
-                        blocking_cars_bottom.append(car)
-                        found = True
-    return 1 + len(blocking_cars) + min(len(blocking_cars_top), len(blocking_cars_bottom))
+    
+    res = 1 + len(blocking_cars)
+    blocking_cars_top = []
+    blocking_cars_bottom = []
+
+    for car in blocking_cars:
+        # car in blocking_cars must be vertical
+        # case1: cannot travel up
+        if car.length == 3:
+            count_cannot_up = 0
+            # print("cannot up")
+            for i in range(car.var_coord, 3):
+                y_coord = i + car.length
+                x_coord = car.fix_coord
+                if grid[y_coord][x_coord] != ".":
+                    blocking_car = find_car(cars, x_coord, y_coord)
+                    if blocking_car not in blocking_cars_bottom:
+                        blocking_cars_bottom.append(blocking_car)
+                        count_cannot_up = count_cannot_up + 1
+                    break
+            res = res + count_cannot_up
+        # case2: can travel up and down
+        else:
+            count_up = 0
+            count_down = 0
+            # down 
+            for i in range(car.var_coord, 3):
+                y_coord = i + car.length
+                x_coord = car.fix_coord
+                if grid[y_coord][x_coord] != ".":
+                    blocking_car = find_car(cars, x_coord, y_coord)
+                    if blocking_car not in blocking_cars_bottom:
+                        blocking_cars_bottom.append(blocking_car)
+                        count_up = count_up + 1
+                    break
+            # up
+            # this case length == 2
+            # move up distance(at least 1)
+            car_bottom = car.var_coord + car.length - 1
+            for i in range(1, car_bottom - 1):
+                    y_coord = car.var_coord - i
+                    x_coord = car.fix_coord
+                    if board.grid[y_coord][x_coord] != '.':
+                        blocking_car = find_car(board.cars, x_coord, y_coord)
+                        if blocking_car not in blocking_cars_top:
+                            blocking_cars_top.append(blocking_car)
+                            count_down = count_down + 1
+            res = res + min(count_up, count_down)
+    return res
 
 def compare_dfs(state_a, state_b):
     if not state_a.f == state_b.f:
         return state_b.f - state_a.f 
     return state_b.id - state_a.id
 
-def in_explored(explored, state):
+def in_explored_dfs(explored, state):
     for _state in explored:
         if state.board == _state.board:
             return True
@@ -237,12 +261,10 @@ def dfs(init_board):
     init_state = State(init_board, zero_heuristic, 0, 0)
     # frontier is a stack of states (in DFS), LIFO
     frontier = [init_state]
-    # frontier = get_successors(init_state)
-    # frontier.sort(key=functools.cmp_to_key(compare_dfs))
     explored = [] # a set of nodes(states)
     while frontier:
         new_state = frontier.pop() # select and remove path from frontier
-        if not in_explored(explored, new_state):
+        if not in_explored_dfs(explored, new_state):
             explored.append(new_state)
             if is_goal(new_state):
                 path = get_path(new_state)
@@ -276,37 +298,98 @@ def a_star(init_board, hfn):
     :rtype: List[State], int
     """
     init_state = State(init_board, hfn, hfn(init_board), 0)
-    num_states = 0
     # frontier is a priority queue in A star
     frontier = [(init_state.f, init_state.id, 0, init_state)]
     heapq.heapify(frontier)
-
+    num_nodes = 0
     explored = [] # a set of nodes(boards)
     while frontier:
         f, id, parentId, new_state = heapq.heappop(frontier) # select and remove path from frontier
+        num_nodes = num_nodes + 1
         if not in_explored(explored, new_state):
-            num_states = num_states + 1
             explored.append(new_state)
             if is_goal(new_state):
                 path = get_path(new_state)
-                return path, new_state.depth
+                return path, new_state.depth, num_nodes
             else:
                 neighbours = get_successors(new_state)
                 for neighbour in neighbours:
                     heapq.heappush(frontier, (neighbour.f, neighbour.id, neighbour.parent.id, neighbour))
     return [], -1
 
-# i = 0
-# for test_board in boards:
-#     i = i + 1
-#     print("Jam-",i)
-#     test_board.display()
-#     path1, cost1, num_state1 = a_star(test_board, blocking_heuristic)
-#     print("# of states:", num_state1)
-#     print("cost of blocking_heuristic:",cost1)
-#     path2, cost2, num_state2 = a_star(test_board, advanced_heuristic)
-#     print("# of states : ", num_state2)
-#     print("cost of advanced_heuristic:",cost2)
-#     if num_state1 >= num_state2:
-#         print("advanced heuristic dominates the blocking heuristic")
+i = 0
+for test_board in boards:
+    i = i + 1
+    print("Jam-",i)
+    test_board.display()
+    path1, cost1, num_state1 = a_star(test_board, blocking_heuristic)
+    print("# of nodes:", num_state1)
+    print("cost of blocking_heuristic:",cost1)
+    path2, cost2, num_state2 = a_star(test_board, advanced_heuristic)
+    print("# of nodes: ", num_state2)
+    print("cost of advanced_heuristic:",cost2)
+    if cost1 != cost2:
+        print("cost error!")
+    if num_state1 >= num_state2:
+        print("advanced heuristic dominates the blocking heuristic")
 
+
+
+
+
+# def advanced_heuristic(board):
+#     """
+#     An advanced heuristic of your own choosing and invention.
+
+#     :param board: The current board.
+#     :type board: Board
+#     :return: The heuristic value.
+#     :rtype: int
+#     """
+#     """
+#     idea: advanced heuristic function returns zero at any goal board,
+#     and similar to blocking_heuristic, we add 1 for each blocking car.
+#     and we add min of cars blocks blocking cars upper or below
+#     """
+#     grid = board.grid
+#     cars = board.cars
+#     # if it is goal state, return 0
+#     if grid[2][5] == ">":
+#         return 0
+#     # if it is not goal state find blocking cars
+#     block_col = []
+#     right = 10
+#     for i in range(1,6):
+#         if grid[2][i] == ">":
+#             right = i
+#         elif grid[2][i] == "^" or grid[2][i] == "|" or grid[2][i] == "v":
+#             if i > right:
+#                 block_col.append(i)
+#     #we find the blocking cars
+#     blocking_cars = []
+#     blocking_cars_top = []
+#     blocking_cars_bottom = []
+#     for car in cars:
+#         if car.is_goal:
+#             continue
+#         if car.orientation == "v":
+#             if car.fix_coord in block_col:
+#                 if car.var_coord + car.length < 3:
+#                     blocking_cars_top.append(car)
+#                 elif car.var_coord > 2:
+#                     blocking_cars_bottom.append(car)
+#                 else:
+#                     blocking_cars.append(car)
+#         elif car.orientation == "h":
+#             found = False
+#             for i in range(car.var_coord, car.var_coord + car.length):
+#                 if i in block_col:
+#                     if found:
+#                         break
+#                     elif car.fix_coord < 2:
+#                         blocking_cars_top.append(car)
+#                         found = True
+#                     else:
+#                         blocking_cars_bottom.append(car)
+#                         found = True
+#     return 1 + len(blocking_cars) + min(len(blocking_cars_top), len(blocking_cars_bottom))

@@ -7,9 +7,9 @@ Jam- 1
 | ^ . . . < > |
 | v . < - > . |
 +-------------+
-# of states: 674
+# of nodes: 4114
 cost of blocking_heuristic: 8
-# of states :  516
+# of nodes:  1436
 cost of advanced_heuristic: 8
 advanced heuristic dominates the blocking heuristic
 Jam- 2
@@ -21,9 +21,9 @@ Jam- 2
 | . . ^ . < > |
 | < > v < > . |
 +-------------+
-# of states: 404
+# of nodes: 2310
 cost of blocking_heuristic: 8
-# of states :  231
+# of nodes:  1918
 cost of advanced_heuristic: 8
 advanced heuristic dominates the blocking heuristic
 Jam- 3
@@ -35,9 +35,9 @@ Jam- 3
 | . ^ . v . | |
 | . v < > . v |
 +-------------+
-# of states: 456
+# of nodes: 3477
 cost of blocking_heuristic: 14
-# of states :  456
+# of nodes:  3282
 cost of advanced_heuristic: 14
 advanced heuristic dominates the blocking heuristic
 Jam- 4
@@ -49,9 +49,9 @@ Jam- 4
 | . . v . . ^ |
 | . . < - > v |
 +-------------+
-# of states: 140
+# of nodes: 435
 cost of blocking_heuristic: 9
-# of states :  140
+# of nodes:  206
 cost of advanced_heuristic: 9
 advanced heuristic dominates the blocking heuristic
 Jam- 5
@@ -63,9 +63,9 @@ Jam- 5
 | ^ . . . < > |
 | v . . . < > |
 +-------------+
-# of states: 611
+# of nodes: 3682
 cost of blocking_heuristic: 9
-# of states :  532
+# of nodes:  1046
 cost of advanced_heuristic: 9
 advanced heuristic dominates the blocking heuristic
 Jam- 6
@@ -77,9 +77,9 @@ Jam- 6
 | ^ . v v . . |
 | v . . < - > |
 +-------------+
-# of states: 565
+# of nodes: 3477
 cost of blocking_heuristic: 9
-# of states :  546
+# of nodes:  1751
 cost of advanced_heuristic: 9
 advanced heuristic dominates the blocking heuristic
 Jam- 7
@@ -91,9 +91,9 @@ Jam- 7
 | . . . ^ . . |
 | . . . v . . |
 +-------------+
-# of states: 1931
+# of nodes: 18445
 cost of blocking_heuristic: 13
-# of states :  1734
+# of nodes:  18445
 cost of advanced_heuristic: 13
 advanced heuristic dominates the blocking heuristic
 Jam- 8
@@ -105,9 +105,9 @@ Jam- 8
 | < > ^ < - > |
 | < > v < - > |
 +-------------+
-# of states: 910
+# of nodes: 4516
 cost of blocking_heuristic: 12
-# of states :  725
+# of nodes:  3017
 cost of advanced_heuristic: 12
 advanced heuristic dominates the blocking heuristic
 Jam- 9
@@ -119,9 +119,9 @@ Jam- 9
 | | . ^ . v ^ |
 | v . v . . v |
 +-------------+
-# of states: 376
+# of nodes: 1696
 cost of blocking_heuristic: 12
-# of states :  235
+# of nodes:  1522
 cost of advanced_heuristic: 12
 advanced heuristic dominates the blocking heuristic
 Jam- 10
@@ -133,9 +133,9 @@ Jam- 10
 | v . . ^ < > |
 | < > . v < > |
 +-------------+
-# of states: 1481
+# of nodes: 11924
 cost of blocking_heuristic: 17
-# of states :  1373
+# of nodes:  11435
 cost of advanced_heuristic: 17
 advanced heuristic dominates the blocking heuristic
 Jam- 11
@@ -147,9 +147,9 @@ Jam- 11
 | . . v . . ^ |
 | . . < - > v |
 +-------------+
-# of states: 656
+# of nodes: 4804
 cost of blocking_heuristic: 25
-# of states :  626
+# of nodes:  4558
 cost of advanced_heuristic: 25
 advanced heuristic dominates the blocking heuristic
 Jam- 12
@@ -161,9 +161,9 @@ Jam- 12
 | . . . . ^ . |
 | < - > . v . |
 +-------------+
-# of states: 746
+# of nodes: 4494
 cost of blocking_heuristic: 17
-# of states :  554
+# of nodes:  3899
 cost of advanced_heuristic: 17
 advanced heuristic dominates the blocking heuristic
 Jam- 13
@@ -175,9 +175,9 @@ Jam- 13
 | | . . ^ < > |
 | v < > v < > |
 +-------------+
-# of states: 3750
+# of nodes: 25772
 cost of blocking_heuristic: 16
-# of states :  3113
+# of nodes:  21332
 cost of advanced_heuristic: 16
 advanced heuristic dominates the blocking heuristic
 Jam- 14
@@ -189,9 +189,9 @@ Jam- 14
 | . . ^ . < > |
 | < > v . . . |
 +-------------+
-# of states: 3415
+# of nodes: 29543
 cost of blocking_heuristic: 17
-# of states :  2755
+# of nodes:  22416
 cost of advanced_heuristic: 17
 advanced heuristic dominates the blocking heuristic
 Jam- 15
@@ -203,9 +203,9 @@ Jam- 15
 | v v v v < > |
 | . < > < > . |
 +-------------+
-# of states: 518
+# of nodes: 3148
 cost of blocking_heuristic: 23
-# of states :  514
+# of nodes:  3136
 cost of advanced_heuristic: 23
 advanced heuristic dominates the blocking heuristic
 Jam- 16
@@ -217,9 +217,9 @@ Jam- 16
 | . . v . . . |
 | < > . . . . |
 +-------------+
-# of states: 1983
+# of nodes: 16117
 cost of blocking_heuristic: 21
-# of states :  1870
+# of nodes:  15412
 cost of advanced_heuristic: 21
 advanced heuristic dominates the blocking heuristic
 Jam- 17
@@ -231,9 +231,9 @@ Jam- 17
 | < - > | ^ ^ |
 | < - > v v v |
 +-------------+
-# of states: 1808
+# of nodes: 14696
 cost of blocking_heuristic: 24
-# of states :  1466
+# of nodes:  12606
 cost of advanced_heuristic: 24
 advanced heuristic dominates the blocking heuristic
 Jam- 18
@@ -245,9 +245,9 @@ Jam- 18
 | v < > . . . |
 | < - > . . . |
 +-------------+
-# of states: 1352
+# of nodes: 9051
 cost of blocking_heuristic: 25
-# of states :  1351
+# of nodes:  7431
 cost of advanced_heuristic: 25
 advanced heuristic dominates the blocking heuristic
 Jam- 19
@@ -259,9 +259,9 @@ Jam- 19
 | . < - > v . |
 | . . . . . . |
 +-------------+
-# of states: 466
+# of nodes: 3337
 cost of blocking_heuristic: 22
-# of states :  463
+# of nodes:  3233
 cost of advanced_heuristic: 22
 advanced heuristic dominates the blocking heuristic
 Jam- 20
@@ -273,9 +273,9 @@ Jam- 20
 | . . ^ < > v |
 | . . v < - > |
 +-------------+
-# of states: 339
+# of nodes: 1415
 cost of blocking_heuristic: 10
-# of states :  306
+# of nodes:  627
 cost of advanced_heuristic: 10
 advanced heuristic dominates the blocking heuristic
 Jam- 21
@@ -287,9 +287,9 @@ Jam- 21
 | . . . . . . |
 | . . . < - > |
 +-------------+
-# of states: 242
+# of nodes: 1389
 cost of blocking_heuristic: 21
-# of states :  242
+# of nodes:  1214
 cost of advanced_heuristic: 21
 advanced heuristic dominates the blocking heuristic
 Jam- 22
@@ -301,9 +301,9 @@ Jam- 22
 | ^ v < > . ^ |
 | v < - > . v |
 +-------------+
-# of states: 2490
+# of nodes: 17803
 cost of blocking_heuristic: 26
-# of states :  2017
+# of nodes:  13464
 cost of advanced_heuristic: 26
 advanced heuristic dominates the blocking heuristic
 Jam- 23
@@ -315,9 +315,9 @@ Jam- 23
 | . . v v < > |
 | . . < - > . |
 +-------------+
-# of states: 1317
+# of nodes: 9657
 cost of blocking_heuristic: 29
-# of states :  1284
+# of nodes:  8219
 cost of advanced_heuristic: 29
 advanced heuristic dominates the blocking heuristic
 Jam- 24
@@ -329,9 +329,9 @@ Jam- 24
 | < - > . ^ . |
 | < > . . v . |
 +-------------+
-# of states: 4095
+# of nodes: 41549
 cost of blocking_heuristic: 25
-# of states :  3962
+# of nodes:  40832
 cost of advanced_heuristic: 25
 advanced heuristic dominates the blocking heuristic
 Jam- 25
@@ -343,9 +343,9 @@ Jam- 25
 | v ^ . ^ < > |
 | . v . v < > |
 +-------------+
-# of states: 6582
+# of nodes: 57492
 cost of blocking_heuristic: 27
-# of states :  5972
+# of nodes:  54000
 cost of advanced_heuristic: 27
 advanced heuristic dominates the blocking heuristic
 Jam- 26
@@ -357,9 +357,9 @@ Jam- 26
 | v . ^ . . ^ |
 | . . v < > v |
 +-------------+
-# of states: 4154
+# of nodes: 32215
 cost of blocking_heuristic: 28
-# of states :  3785
+# of nodes:  31701
 cost of advanced_heuristic: 28
 advanced heuristic dominates the blocking heuristic
 Jam- 27
@@ -371,9 +371,9 @@ Jam- 27
 | . . ^ . . v |
 | . . v < - > |
 +-------------+
-# of states: 2218
+# of nodes: 16755
 cost of blocking_heuristic: 28
-# of states :  1964
+# of nodes:  14952
 cost of advanced_heuristic: 28
 advanced heuristic dominates the blocking heuristic
 Jam- 28
@@ -385,9 +385,9 @@ Jam- 28
 | v v < - > | |
 | < > < > . v |
 +-------------+
-# of states: 1466
+# of nodes: 7380
 cost of blocking_heuristic: 30
-# of states :  1053
+# of nodes:  4491
 cost of advanced_heuristic: 30
 advanced heuristic dominates the blocking heuristic
 Jam- 29
@@ -399,9 +399,9 @@ Jam- 29
 | v < > ^ . ^ |
 | < - > v . v |
 +-------------+
-# of states: 4277
+# of nodes: 36992
 cost of blocking_heuristic: 31
-# of states :  4164
+# of nodes:  36508
 cost of advanced_heuristic: 31
 advanced heuristic dominates the blocking heuristic
 Jam- 30
@@ -413,9 +413,9 @@ Jam- 30
 | . . . . . | |
 | < > < > . v |
 +-------------+
-# of states: 1028
+# of nodes: 7183
 cost of blocking_heuristic: 32
-# of states :  961
+# of nodes:  6715
 cost of advanced_heuristic: 32
 advanced heuristic dominates the blocking heuristic
 Jam- 31
@@ -427,9 +427,9 @@ Jam- 31
 | < > | . . v |
 | . . v < - > |
 +-------------+
-# of states: 3740
+# of nodes: 29177
 cost of blocking_heuristic: 37
-# of states :  3525
+# of nodes:  28371
 cost of advanced_heuristic: 37
 advanced heuristic dominates the blocking heuristic
 Jam- 32
@@ -441,9 +441,9 @@ Jam- 32
 | v . . ^ . | |
 | < > . v . v |
 +-------------+
-# of states: 501
+# of nodes: 2696
 cost of blocking_heuristic: 37
-# of states :  472
+# of nodes:  2636
 cost of advanced_heuristic: 37
 advanced heuristic dominates the blocking heuristic
 Jam- 33
@@ -455,9 +455,9 @@ Jam- 33
 | v < > ^ ^ | |
 | < - > v v v |
 +-------------+
-# of states: 3018
+# of nodes: 19107
 cost of blocking_heuristic: 40
-# of states :  2256
+# of nodes:  16762
 cost of advanced_heuristic: 40
 advanced heuristic dominates the blocking heuristic
 Jam- 34
@@ -469,9 +469,9 @@ Jam- 34
 | . . ^ v < > |
 | < > v < > . |
 +-------------+
-# of states: 4080
+# of nodes: 33489
 cost of blocking_heuristic: 43
-# of states :  4013
+# of nodes:  31970
 cost of advanced_heuristic: 43
 advanced heuristic dominates the blocking heuristic
 Jam- 35
@@ -483,10 +483,11 @@ Jam- 35
 | v < > ^ ^ . |
 | < > . v v . |
 +-------------+
-# of states: 3816
+# of nodes: 32694
 cost of blocking_heuristic: 43
-# of states :  3859
+# of nodes:  32489
 cost of advanced_heuristic: 43
+advanced heuristic dominates the blocking heuristic
 Jam- 36
 +-------------+
 | ^ < - > < > |
@@ -496,9 +497,9 @@ Jam- 36
 | . . ^ v < > |
 | < > v . . . |
 +-------------+
-# of states: 2056
+# of nodes: 16368
 cost of blocking_heuristic: 44
-# of states :  1860
+# of nodes:  15743
 cost of advanced_heuristic: 44
 advanced heuristic dominates the blocking heuristic
 Jam- 37
@@ -510,9 +511,9 @@ Jam- 37
 | v . . ^ < > |
 | < > . v < > |
 +-------------+
-# of states: 1863
+# of nodes: 13382
 cost of blocking_heuristic: 47
-# of states :  1731
+# of nodes:  11546
 cost of advanced_heuristic: 47
 advanced heuristic dominates the blocking heuristic
 Jam- 38
@@ -524,9 +525,9 @@ Jam- 38
 | . . ^ < > v |
 | . . v < - > |
 +-------------+
-# of states: 3038
+# of nodes: 22364
 cost of blocking_heuristic: 48
-# of states :  2963
+# of nodes:  21714
 cost of advanced_heuristic: 48
 advanced heuristic dominates the blocking heuristic
 Jam- 39
@@ -538,9 +539,9 @@ Jam- 39
 | ^ ^ < > . v |
 | v v < > . . |
 +-------------+
-# of states: 3502
+# of nodes: 24018
 cost of blocking_heuristic: 50
-# of states :  3469
+# of nodes:  23860
 cost of advanced_heuristic: 50
 advanced heuristic dominates the blocking heuristic
 Jam- 40
@@ -552,8 +553,8 @@ Jam- 40
 | . . ^ v < > |
 | < > v < > . |
 +-------------+
-# of states: 2302
+# of nodes: 18616
 cost of blocking_heuristic: 51
-# of states :  2578
-cost of advanced_heuristic: 51 
-
+# of nodes:  16602
+cost of advanced_heuristic: 51
+advanced heuristic dominates the blocking heuristic
